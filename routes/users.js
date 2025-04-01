@@ -99,7 +99,7 @@ router.post("/reset-password", async (req, res) => {
     await user.save();
 
     // Create reset link (pointing to frontend)
-    const resetLink = `http://localhost:5173/reset-password/${resetToken}`;
+    const resetLink = `https://reset-passwords.netlify.app/reset-password/${resetToken}`;
     console.log("Reset Link - ",resetLink)
     // Send email with reset link
     await transporter.sendMail({
